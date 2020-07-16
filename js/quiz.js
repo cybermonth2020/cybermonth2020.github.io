@@ -74,6 +74,7 @@
     }
   
     function showSlide(n) {
+        resultsContainer.innerHTML = '';
       slides[currentSlide].classList.remove('active-slide');
       slides[n].classList.add('active-slide');
       currentSlide = n;
@@ -81,7 +82,7 @@
         previousButton.style.display = 'none';
       }
       else{
-        previousButton.style.display = 'inline-block';
+        previousButton.style.display = 'none';
       }
       if(currentSlide === slides.length-1){
         nextButton.style.display = 'none';
@@ -121,13 +122,17 @@
         if(userAnswer === myQuestions[currentSlide].correctAnswer){
           // color the answers green
           answerContainers[currentSlide].style.color = 'lightgreen';
+
+          explanationText ='You got it right buddy!';
         }
         // if answer is wrong or blank
         else{
           // color the answers red
           answerContainers[currentSlide].style.color = 'red';
-        }
 
+          explanationText = 'Too bad mate, git gud!'
+        }
+        resultsContainer.innerHTML = explanationText;
 
     }
   
