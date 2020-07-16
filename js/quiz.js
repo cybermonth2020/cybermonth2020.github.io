@@ -17,7 +17,7 @@
             // ...add an HTML radio button
             answers.push(
               `<label>
-                <input type="radio" name="question${questionNumber}" value="${letter}">
+                <input type="radio" class="radiobtn${questionNumber}" name="question${questionNumber}" value="${letter}">
                 ${letter} :
                 ${currentQuestion.answers[letter]}
               </label>`
@@ -85,12 +85,32 @@
       }
       if(currentSlide === slides.length-1){
         nextButton.style.display = 'none';
+        checkAnswer.style.display = 'inline-block';
+        submitButton.style.display = 'none';
+      }
+      else{
+        nextButton.style.display = 'none';
+        checkAnswer.style.display = 'inline-block';
+        submitButton.style.display = 'none';
+      }
+    }
+
+    function showIfCorrect() {
+      if(currentSlide === slides.length-1){
+        nextButton.style.display = 'none';
+        checkAnswer.style.display = 'none';
         submitButton.style.display = 'inline-block';
       }
       else{
         nextButton.style.display = 'inline-block';
+        checkAnswer.style.display = 'none';
         submitButton.style.display = 'none';
       }
+      var radios = document.getElementsByName('question' + currentSlide);
+      for( i = 0; i < radios.length; i++ ) {
+        radios[i].disabled = true;
+        }
+
     }
   
     function showNextSlide() {
@@ -142,6 +162,7 @@
     // Pagination
     const previousButton = document.getElementById("previous");
     const nextButton = document.getElementById("next");
+    const checkAnswer = document.getElementById("check")
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
   
@@ -151,6 +172,7 @@
     // Event listeners
     submitButton.addEventListener('click', showResults);
     previousButton.addEventListener("click", showPreviousSlide);
+    checkAnswer.addEventListener("click", showIfCorrect);
     nextButton.addEventListener("click", showNextSlide);
   })();
   
