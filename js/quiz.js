@@ -111,6 +111,24 @@
         radios[i].disabled = true;
         }
 
+        const answerContainers = quizContainer.querySelectorAll('.answers');
+
+        const answerContainer = answerContainers[currentSlide];
+        const selector = `input[name=question${currentSlide}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+  
+        // if answer is correct
+        if(userAnswer === myQuestions[currentSlide].correctAnswer){
+          // color the answers green
+          answerContainers[currentSlide].style.color = 'lightgreen';
+        }
+        // if answer is wrong or blank
+        else{
+          // color the answers red
+          answerContainers[currentSlide].style.color = 'red';
+        }
+
+
     }
   
     function showNextSlide() {
