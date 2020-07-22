@@ -60,7 +60,7 @@
           numCorrect++;
   
           // color the answers green
-          answerContainers[questionNumber].style.color = 'lightgreen';
+          answerContainers[questionNumber].style.color = 'green';
         }
         // if answer is wrong or blank
         else{
@@ -121,16 +121,42 @@
         // if answer is correct
         if(userAnswer === myQuestions[currentSlide].correctAnswer){
           // color the answers green
-          answerContainers[currentSlide].style.color = 'lightgreen';
-
-          explanationText ='You got it right buddy!';
+          answerContainers[currentSlide].style.color = 'green';
+          switch(currentSlide) {
+            case 0: explanationText='Way to go! This one was easy.\nIn this case the longest password is for sure the safest, the fact that it\'s not an easily guessable word also helps.';
+              break;
+            case 1: explanationText='That\'s correct! In general for two password that are of the same lenght the stronger password is the one with more charsets. In this case letters + digits is better than only letters.';
+              break;
+            case 2: explanationText='Good job! This one wasn\'t so easy.\nWhile we said before that letters + digits is better than letters only it is way better than using a common password followed by some digits. Always avoid common words.\nWhat are the common words? If it came to your mind in less than 1 minute it is a common word.\nAlso \'loveisstrong\' is a common password, love themed ones are one of the most used.';
+              break;
+            case 3: explanationText='Nice, you got it right!\nUppercase letters count as a different charset and as uppercase letters are 26 while digits only 10 it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
+              break;
+            case 4: explanationText='Great! You got this one.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacket. This should make you reflect that strong passwords hasn\'t be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
+              break;
+            case 5: explanationText='Congratulations! \n This password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
+              break;
+            default: explanationText='';
+          }
         }
         // if answer is wrong or blank
         else{
           // color the answers red
           answerContainers[currentSlide].style.color = 'red';
-
-          explanationText = 'Too bad mate, git gud!'
+          switch(currentSlide) {
+            case 0: explanationText='Wrong answer.\nIn this case the longest password is for sure the safest, the fact that it\'s not an easily guessable word also helps.';
+              break;
+            case 1: explanationText='Too bad, the right answer was a. In general for two password that are of the same lenght the stronger password is the one with more charsets. In this case letters + digits is better than only letters.';
+              break;
+            case 2: explanationText='Mmh... not quire right, the right answer is b.\nWhile we said before that letters + digits is better than letters only it is way better than using a common password followed by some digits. Always avoid common words.\nWhat are the common words? If it came to your mind in less than 1 minute it is a common word.\nAlso \'loveisstrong\' is a common password, love themed ones are one of the most used.';
+              break;
+            case 3: explanationText='Not quite right, the right answer is a.\nUppercase letters count as a different charset and, as uppercase letters are 26 while digits only 10, it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
+              break;
+            case 4: explanationText='This was tricky, but the right answer is c.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacket. This should make you reflect that strong passwords hasn\'t be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
+              break;
+            case 5: explanationText='Wrong answer, you should have chosen c.\nThis password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
+              break;
+            default: explanationText='';
+          }'
         }
         resultsContainer.innerHTML = explanationText;
 
@@ -199,9 +225,9 @@
         question: "What is the strongest password between these?",
         answers: {
           a: "1234567890",
-          b: "zaq12wsxcde34",
-          c: "Zebra!394ea",
-          d: "Password....."
+          b: "zaq12wsxcde345",
+          c: "Zebra!394eaD",
+          d: "Password......."
         },
         correctAnswer: "c"
       }
