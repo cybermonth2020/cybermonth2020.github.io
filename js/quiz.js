@@ -150,32 +150,60 @@
     const submitButton = document.getElementById('submit');
     const myQuestions = [
       {
-        question: "Who invented JavaScript?",
+        question: "What is the strongest password between these?",
         answers: {
-          a: "Douglas Crockford",
-          b: "Sheryl Sandberg",
-          c: "Brendan Eich"
+          a: "banana",
+          b: "conciousness",
+          c: "fantastic"
+        },
+        correctAnswer: "b"
+      },
+      {
+        question: "What is the strongest password between these?",
+        answers: {
+          a: "promise49",
+          b: "clarity",
+          c: "frequency"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "What is the strongest password between these?",
+        answers: {
+          a: "loveisstrong",
+          b: "ghixnzmaeton",
+          c: "password1234",
+          d: "387295729405"
+        },
+        correctAnswer: "b"
+      },
+      {
+        question: "What is the strongest password between these?",
+        answers: {
+          a: "steveTXUO",
+          b: "steve1452",
+          c: "1452steve",
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "What is the strongest password between these?",
+        answers: {
+          a: "aV5xSO3!4x43",
+          b: "MayTheForceBeWithYou",
+          c: "CoralMuseumLanternCrow",
         },
         correctAnswer: "c"
       },
       {
-        question: "Which one of these is a JavaScript package manager?",
+        question: "What is the strongest password between these?",
         answers: {
-          a: "Node.js",
-          b: "TypeScript",
-          c: "npm"
+          a: "1234567890",
+          b: "zaq12wsxcde34",
+          c: "Zebra!394ea",
+          d: "Password....."
         },
         correctAnswer: "c"
-      },
-      {
-        question: "Which tool can you use to ensure code quality?",
-        answers: {
-          a: "Angular",
-          b: "jQuery",
-          c: "RequireJS",
-          d: "ESLint"
-        },
-        correctAnswer: "d"
       }
     ];
   
