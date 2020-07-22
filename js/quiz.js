@@ -131,7 +131,7 @@
               break;
             case 3: explanationText='Nice, you got it right!\nUppercase letters count as a different charset and as uppercase letters are 26 while digits only 10 it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
               break;
-            case 4: explanationText='Great! You got this one.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacket. This should make you reflect that strong passwords hasn\'t be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
+            case 4: explanationText='Great! You got this one.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacked. This should make you reflect that strong passwords hasn\'t to be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
               break;
             case 5: explanationText='Congratulations! \n This password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
               break;
@@ -151,7 +151,7 @@
               break;
             case 3: explanationText='Not quite right, the right answer is a.\nUppercase letters count as a different charset and, as uppercase letters are 26 while digits only 10, it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
               break;
-            case 4: explanationText='This was tricky, but the right answer is c.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacket. This should make you reflect that strong passwords hasn\'t be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
+            case 4: explanationText='This was tricky, but the right answer is c.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacked. This should make you reflect that strong passwords hasn\'t to be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
               break;
             case 5: explanationText='Wrong answer, you should have chosen c.\nThis password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
               break;
@@ -160,7 +160,7 @@
         }
         resultsContainer.innerHTML = explanationText;
     }
-    
+
     function showNextSlide() {
       showSlide(currentSlide + 1);
     }
