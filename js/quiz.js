@@ -156,12 +156,11 @@
             case 5: explanationText='Wrong answer, you should have chosen c.\nThis password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
               break;
             default: explanationText='';
-          }'
+          }
         }
         resultsContainer.innerHTML = explanationText;
-
     }
-  
+    
     function showNextSlide() {
       showSlide(currentSlide + 1);
     }
