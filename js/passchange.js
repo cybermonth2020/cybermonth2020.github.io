@@ -1,3 +1,5 @@
+(window.onload = function(){
+
 var strength = {
     0: "Worst ☹",
     1: "Bad ☹",
@@ -25,4 +27,4 @@ if(val !== "") {
 else {
     text.innerHTML = "";
 }
-});
+})});
