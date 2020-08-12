@@ -1,16 +1,17 @@
 (window.onload = function(){
 
 var strength = {
-    0: "Worst ☹",
-    1: "Bad ☹",
-    2: "Weak ☹",
-    3: "Good ☺",
-    4: "Strong ☻"
+    0: "Worst :(",
+    1: "Bad :(",
+    2: "Weak :/",
+    3: "Good :)",
+    4: "Strong :D"
 }
 
 var password = document.getElementById('password');
 var meter = document.getElementById('password-strength-meter');
 var text = document.getElementById('password-strength-text');
+var next = document.getElementById('next-section');
 
 password.addEventListener('input', function()
 {
@@ -26,5 +27,12 @@ if(val !== "") {
 }
 else {
     text.innerHTML = "";
+}
+
+if(result.score >= 3) {
+    next.classList.remove("hidden");
+}
+else {
+    next.classList.add("hidden");
 }
 })});

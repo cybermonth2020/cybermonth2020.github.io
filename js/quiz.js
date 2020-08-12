@@ -70,14 +70,14 @@
       });
   
       // show number of correct answers out of total
-      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+      resultsContainer.innerHTML = `You got ${numCorrect} right answers out of ${myQuestions.length}<br><br><a href="passchange.html">Click here to set a new password for the hacked account!</a>`;
     }
   
     function showSlide(n) {
-        resultsContainer.innerHTML = '';
       slides[currentSlide].classList.remove('active-slide');
       slides[n].classList.add('active-slide');
       currentSlide = n;
+      resultsContainer.innerHTML =`Question ${currentSlide+1}/6`;
       if(currentSlide === 0){
         previousButton.style.display = 'none';
       }
@@ -127,11 +127,11 @@
               break;
             case 1: explanationText='That\'s correct! In general for two password that are of the same lenght the stronger password is the one with more charsets. In this case letters + digits is better than only letters.';
               break;
-            case 2: explanationText='Good job! This one wasn\'t so easy.\nWhile we said before that letters + digits is better than letters only it is way better than using a common password followed by some digits. Always avoid common words.\nWhat are the common words? If it came to your mind in less than 1 minute it is a common word.\nAlso \'loveisstrong\' is a common password, love themed ones are one of the most used.';
+            case 2: explanationText='Good job! This one wasn\'t so easy.\nWe said before that letters + digits is better than letters only, but it is way better using only random letters than using a common password followed by some digits. Always avoid common words.\nWhat are the common words? If it came to your mind in less than 1 minute it is a common word.\nAlso \'loveisstrong\' is a common password, love themed ones are one of the most used.';
               break;
-            case 3: explanationText='Nice, you got it right!\nUppercase letters count as a different charset and as uppercase letters are 26 while digits only 10 it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
+            case 3: explanationText='Nice, you got it right!\nUppercase letters count as a different charset and, as uppercase letters are 26 while digits only 10, it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
               break;
-            case 4: explanationText='Great! You got this one.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacked. This should make you reflect that strong passwords hasn\'t to be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
+            case 4: explanationText='Great! You got this one.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacked. This should make you reflect that strong passwords haven\'t to be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
               break;
             case 5: explanationText='Congratulations! \n This password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
               break;
@@ -147,11 +147,11 @@
               break;
             case 1: explanationText='Too bad, the right answer was a. In general for two password that are of the same lenght the stronger password is the one with more charsets. In this case letters + digits is better than only letters.';
               break;
-            case 2: explanationText='Mmh... not quire right, the right answer is b.\nWhile we said before that letters + digits is better than letters only it is way better than using a common password followed by some digits. Always avoid common words.\nWhat are the common words? If it came to your mind in less than 1 minute it is a common word.\nAlso \'loveisstrong\' is a common password, love themed ones are one of the most used.';
+            case 2: explanationText='Mmh... not quire right, the right answer is b.\nWe said before that letters + digits is better than letters only, but it is way better using only random letters than using a common password followed by some digits. Always avoid common words.\nWhat are the common words? If it came to your mind in less than 1 minute it is a common word.\nAlso \'loveisstrong\' is a common password, love themed ones are one of the most used.';
               break;
             case 3: explanationText='Not quite right, the right answer is a.\nUppercase letters count as a different charset and, as uppercase letters are 26 while digits only 10, it\'s way better to use lowercase + uppercase than lowercase + digits (better use all three in fact :D)';
               break;
-            case 4: explanationText='This was tricky, but the right answer is c.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacked. This should make you reflect that strong passwords hasn\'t to be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
+            case 4: explanationText='This was tricky, but the right answer is c.\n Even if \'a\' seems way more complex (because it has more charsets) it\'s way shorter and it takes a shorter time to be hacked. This should make you reflect that strong passwords haven\'t to be random. You can create a strong password by concatenating some uncorrelated words together in order to make a long password easy to remember.\n MayTheForceBeWithYou is less safe because it is not a sequence of random words but a famous movie quote.';
               break;
             case 5: explanationText='Wrong answer, you should have chosen c.\nThis password is the one that uses all 4 charsets (lowecase, uppercase, digits, symbols) and is long enough to be considered safe.';
               break;
